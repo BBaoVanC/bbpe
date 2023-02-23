@@ -1,5 +1,4 @@
-use iced::{Sandbox, Element, Settings};
-use iced::widget;
+use iced::{widget, Element, Sandbox, Settings};
 
 fn main() -> iced::Result {
     App::run(Settings::default())
@@ -7,11 +6,14 @@ fn main() -> iced::Result {
 
 #[derive(Default)]
 struct App {
-    toggled: bool,
+    url: String,
 }
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 enum Message {
-    Toggle,
+    Back,
+    Forward,
+    ChangeUrl(String),
+    NavigateUrl,
 }
 
 impl Sandbox for App {
@@ -26,14 +28,28 @@ impl Sandbox for App {
     }
 
     fn update(&mut self, message: Self::Message) {
+        dbg!(message.clone());
         match message {
-            Message::Toggle => {
-                self.toggled = !self.toggled;
-            }
+            Message::Back => todo!(),
+            Message::Forward => todo!(),
+            Message::ChangeUrl(url) => self.url = url,
+            Message::NavigateUrl => todo!(),
         }
     }
 
     fn view(&self) -> Element<Message> {
-        widget::Toggler::new(Some("hello".into()), self.toggled, |_| Message::Toggle).into()
+        let control_bar = widget::Row::new()
+            .push(widget::button("<").on_press(Message::Back))
+            .push(widget::button(">").on_press(Message::Forward))
+            .push(
+                widget::text_input("Type a URL", &self.url, Message::ChangeUrl)
+                    .on_submit(Message::NavigateUrl),
+            );
+
+        // main content
+        widget::Column::new()
+            .push(control_bar)
+            .push(widget::text("Hello, world!"))
+            .into()
     }
 }
