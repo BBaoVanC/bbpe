@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 iced = "0.8.0"
+servo = { git = "https://github.com/BBaoVanC/servo", branch = "update-yeslogic-fontconfig-sys" }
