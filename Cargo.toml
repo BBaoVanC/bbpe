@@ -12,7 +12,7 @@ version = "0.1.0"
 [patch.crates-io]
 surfman-chains = { git = "https://github.com/servo/surfman-chains.git" }
 # iced_winit = { git = "https://github.com/BBaoVanC/iced", branch = "bbpe" }
-iced_winit = { git = "https://github.com/BBaoVanC/iced", branch = "b" }
+#iced_winit = { git = "https://github.com/BBaoVanC/iced", branch = "b" }
 
 # [patch."https://github.com/iced-rs/winit.git"]
 # winit = { path = "../winit" }
