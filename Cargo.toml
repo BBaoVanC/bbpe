@@ -12,4 +12,3 @@ version = "0.1.0"
 
 [patch.crates-io]
 surfman-chains = { git = "https://github.com/servo/surfman-chains.git" }
-iced_winit = { git = "https://github.com/BBaoVanC/iced.git", branch = "bbpe-fix" }

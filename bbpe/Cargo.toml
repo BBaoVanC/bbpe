@@ -6,5 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-iced = "0.8.0"
-#servo = { git = "https://github.com/BBaoVanC/servo", branch = "master" }
+#iced = "0.8.0"
+iced = { version = "0.8.0", git = "https://github.com/nicoburns/iced", branch = "update-winit-0.28" }
+servo = { git = "https://github.com/BBaoVanC/servo", branch = "master" }
