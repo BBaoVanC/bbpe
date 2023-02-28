@@ -1,10 +1,8 @@
 [package]
-name = "bbpe"
-version.workspace = true
+name = "bbpe-servo"
+version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-iced = "0.8.0"
-#servo = { git = "https://github.com/BBaoVanC/servo", branch = "master" }
