@@ -8,4 +8,4 @@ edition = "2021"
 [dependencies]
 #iced = "0.8.0"
 iced = { version = "0.8.0", git = "https://github.com/nicoburns/iced", branch = "update-winit-0.28" }
-servo = { git = "https://github.com/BBaoVanC/servo", branch = "master" }
+servo = { git = "https://github.com/servo/servo", branch = "master" }
